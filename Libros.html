@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Contador libros</title>
+</head>
+<body>
+    <div class="app">
+        <form class="sidebar" id="form">
+          <label for="Nomlibro"> Nombre del libro
+            <input type="text" id="Nomlibro" required>
+        </label>
+        <label for="Autor"> Autor del libro
+            <input type="text" id="Autor" required>
+        </label>
+        <label for="Pagleidas"> Paginas leidas
+            <input type="number" id="Pagleidas" min="1" max="4000" required>
+        </label>
+        <label for="terminaste"> Terminaste de leerlo?
+            <input type="checkbox" id="terminaste"  >
+        </label>
+        <button type="submit" id="boton"> Agregar </button>
+        </form>
+        <div class="contenedorboton" id="contenedorTarjetas">
+            <div class="casillero" id="casillero">
+                <h3>Autor</h3>
+                <h3>Libro</h3>
+                <h3>Paginas</h3>
+                <nav>
+                    <button class="nocompletado" id="nocompletado" onclick="borrarDiv">Eliminar</button>
+                    <button class="completado"> Leido </button>
+                </nav> 
+            </div>
+        </div>
+        <script src="funciones.js"></script>
+    </div>
+</body>
+</html>
